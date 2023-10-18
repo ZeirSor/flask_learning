@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>control statement</title>
+</head>
+<body>
+
+{% if age > 18 %}
+    <h1>You are over 18 years old and can enter the Internet cafe!</h1>
+{% elif age == 18 %}
+    <h1>You have just turned 18 and need to be accompanied by your parents to enter!</h1>
+{% else %}
+    <h1>You are under 18 years old and cannot enter the Internet cafe!</h1>
+{% endif %}
+<h1></h1>
+{#{% for book in books %}#}
+{#    <h1>book name: {{ book.bookname }}, author: {{ book.author }}</h1>#}
+{#{% endfor %}#}
+
+<table>
+    <thead>
+    <tr>
+        <th>bookname</th>
+        <th>author</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- 在这里添加表格的内容行 -->
+    {% for book in books %}
+        <tr>
+            <td>book.bookname</td>
+            <td>book.author</td>
+        </tr>
+    {% endfor %}
+    <!-- 继续添加更多的数据行 -->
+    </tbody>
+</table>
+
+
+</body>
+</html>
